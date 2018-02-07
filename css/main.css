@@ -1,7 +1,31 @@
+html, body {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
 .container {
     margin-top: 20px;
 }
 
 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 4rem;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 625;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn {
+    margin-top: 20px;
 }
