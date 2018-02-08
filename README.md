@@ -29,10 +29,12 @@ The project is a prototype of improved form design based on learnings from user 
 
 ## Start Jekyll
 
-Once you've got everything installed, run
+Once you've got everything installed, 
+
+`cd [directory_of_repo]`
 
 ```
-jekyll serve --incremental --watch --trace
+jekyll serve
 ```
 
 Then go to
