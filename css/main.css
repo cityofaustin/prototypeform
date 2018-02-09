@@ -48,3 +48,11 @@ span {
 .form-group, .form-check, h1, h2, h3, h4, h5, li, span, small {
     max-width: 545px;
 }
+
+.animal-info {
+    border-style: dotted;
+    border-color: darkgrey;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
