@@ -39,3 +39,7 @@ h5 {
 label {
     margin-top: 1rem;
 }
+
+.form-group, .form-check, h1, h2, h3, h4, h5, li, span, small {
+    max-width: 545px;
+}
