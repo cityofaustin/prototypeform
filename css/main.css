@@ -46,7 +46,7 @@ span {
     display: inline-block
 }
 
-.form-group, .form-check, h1, h2, h3, h4, h5, li, span, small {
+.form-group, .form-check, h1, h2, h3, h4, h5, p, li, span, small {
     max-width: 545px;
 }
 
