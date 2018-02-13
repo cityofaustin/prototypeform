@@ -11,7 +11,7 @@ layout: contact_sidebar
     <div class="js-age-selection">
       <h5>Are you age 18 or older?</h5>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes" checked>
+          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes">
           <label class="form-check-label" for="applicant_ageRadios1">
           Yes
           </label>
@@ -30,7 +30,7 @@ layout: contact_sidebar
     <div class="js-transportation-selection">
       <h5>We provide all veterinary care at no cost to you. Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes" checked>
+          <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes">
           <label class="form-check-label" for="transportationRadios1">
           Yes
           </label>
@@ -48,10 +48,10 @@ layout: contact_sidebar
     <div>
         {% include add_explanation.html %}
     </div>
-    <div>
+    <div class="js-medications-selection">
       <h5>We provide all medications at no cost to you. If necessary, can you come to the Austin Animal Center once a month to pick up heartworm and parasite preventative medications?</h5>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios1" value="Yes" checked>
+          <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios1" value="Yes">
           <label class="form-check-label" for="medicationRadios1">
           Yes
           </label>
@@ -62,17 +62,17 @@ layout: contact_sidebar
           No
           </label>
       </div>
-      <div>
-        <span>(if no, disclaimer) It is vital that foster animals receive their medication for their health and the health of animals around them. You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</span>
+      <div class="alert alert-warning d-none js-medications-alert" role="alert">
+        <p>It is vital that foster animals receive their medication for their health and the health of animals around them. You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</p>
       </div>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
-    <div>
+    <div class="js-humane-selection">
       <h5>Are you currently fostering for another humane organization?</h5>
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios1" value="Yes" checked>
+          <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios1" value="Yes">
           <label class="form-check-label" for="humaneRadios1">
           Yes
           </label>
@@ -83,8 +83,8 @@ layout: contact_sidebar
           No
           </label>
       </div>
-      <div>
-        <span>(If yes, disclaimer) While we do not ask that you stop supporting other organizations, we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time. This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</span>
+      <div class="alert alert-warning d-none js-humane-alert" role="alert">
+        <p>While we do not ask that you stop supporting other organizations, we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time. This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</p>
       </div>
     </div>
     <div>
