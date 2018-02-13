@@ -8,7 +8,7 @@ layout: contact_sidebar
 </div>
 <h2>Tell us about yourself</h2>
 <form>
-    <div>
+    <div class="js-age-selection">
       <h5>Are you age 18 or older?</h5>
       <div class="form-check">
           <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes" checked>
@@ -21,10 +21,13 @@ layout: contact_sidebar
           <label class="form-check-label" for="applicant_ageRadios2">
           No
           </label>
-          <!-- If they choose "no" then send them to a denial screen with the message, "Unfortunately, we cannot accept your application at this time. Please ask a member of your household who is over 18 to apply. If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application." -->
+          <div class="alert alert-danger d-none js-age-disqualifier-alert" role="alert">
+            <h2>Sorry</h2>
+            <p>Unfortunately, we cannot accept your application at this time. Please ask a member of your household who is over 18 to apply. If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+          </div>
       </div>
     </div>
-    <div>
+    <div class="js-transportation-selection">
       <h5>We provide all veterinary care at no cost to you. Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
       <div class="form-check">
           <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes" checked>
@@ -37,7 +40,9 @@ layout: contact_sidebar
           <label class="form-check-label" for="transportationRadios2">
           No
           </label>
-          <!-- If they choose "no" then send them to a denial screen with the message, "Unfortunately, we cannot accept your application at this time. Foster animals must receive veterinary care immediately especially in the event of an emergency, or they could experience permanent damage, trauma, or worse, could die. Please reapply if you get reliable transportation. Thank you for helping us ensure the safety of our animals, and if you would like to help in other ways, please visit http://www.austintexas.gov/department/volunteer." -->
+          <div class="alert alert-danger d-none js-transportation-alert" role="alert">
+            <p>Unfortunately, we cannot accept your application at this time. Foster animals must receive veterinary care immediately especially in the event of an emergency, or they could experience permanent damage, trauma, or worse, could die. Please reapply if you get reliable transportation. Thank you for helping us ensure the safety of our animals, and if you would like to help in other ways, please visit <a href="http://www.austintexas.gov/department/volunteer">our volunteer page</a>.</p>
+          </div>
       </div>
     </div>
     <div>
