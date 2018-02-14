@@ -88,6 +88,21 @@ $(document).ready(() => {
         var hideFollowup = e.target.value === 'No';
         $('.js-have-other-followup').toggleClass('d-none', hideFollowup);
       })
+
+      $('.js-dog-rabies-selector input').on('change', (e) => {
+        var hideAlert = e.target.value === 'Yes';
+        $('.js-dog-rabies-alert').toggleClass('d-none', hideAlert);
+      })
+
+      $('.js-cat-rabies-selector input').on('change', (e) => {
+        var hideAlert = e.target.value === 'Yes';
+        $('.js-cat-rabies-alert').toggleClass('d-none', hideAlert);
+      })
+
+      $('.js-seperate-animals-selector input').on('change', (e) => {
+        var hideAlert = e.target.value === 'Yes';
+        $('.js-seperate-animals-alert').toggleClass('d-none', hideAlert);
+      })
     }
 
     return {
