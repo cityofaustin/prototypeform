@@ -50,7 +50,7 @@ $(document).ready(() => {
     }
   })();
 
-  // INFO ABOUT YOUR AVAILABILITY
+  // INFO ABOUT YOUR AVAILABILITY PAGE
   var aboutAvailabilityPage = (() => {
     var bindEventHandlers = () => {
       $('.js-left-alone-selection').on('change', (e) => {
@@ -66,7 +66,37 @@ $(document).ready(() => {
     }
   })();
 
+  // INFO ABOUT YOUR ANIMALS PAGE
+  var aboutAnimalsPage = (() => {
+    var bindEventHandlers = () => {
+      $('.js-have-animals-selection input').on('change', (e) => {
+        var hideFollowup = e.target.value === 'No';
+        $('.js-have-animals-followup').toggleClass('d-none', hideFollowup);
+      })
+
+      $('.js-have-dog-selection input').on('change', (e) => {
+        var hideFollowup = e.target.value === 'No';
+        $('.js-have-dog-followup').toggleClass('d-none', hideFollowup);
+      })
+
+      $('.js-have-cat-selection input').on('change', (e) => {
+        var hideFollowup = e.target.value === 'No';
+        $('.js-have-cat-followup').toggleClass('d-none', hideFollowup);
+      })
+
+      $('.js-have-other-selection input').on('change', (e) => {
+        var hideFollowup = e.target.value === 'No';
+        $('.js-have-other-followup').toggleClass('d-none', hideFollowup);
+      })
+    }
+
+    return {
+      bindEventHandlers
+    }
+  })();
+
   explanationField.init();
   aboutYourselfPage.bindEventHandlers();
   aboutAvailabilityPage.bindEventHandlers();
+  aboutAnimalsPage.bindEventHandlers();
 });
