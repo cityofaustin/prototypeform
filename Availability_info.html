@@ -7,48 +7,48 @@ layout: contact_sidebar
   <div class="progress-bar" role="progressbar" style="width: 14.29%" aria-valuenow="14.29" aria-valuemin="0" aria-valuemax="100"><a href="Yourself_info.html">2</a></div>
   <div class="progress-bar" role="progressbar" style="width: 14.29%" aria-valuenow="14.29" aria-valuemin="0" aria-valuemax="100"><a href="Availability_info.html">3</a></div>
 </div>
+
 <h2>Tell us about your availability</h2>
 <form>
-    <div>
+    <div class="js-left-alone-selection">
         <h5>On an average day, what is the longest period of time foster animals will be left alone in the home?</h5>
         <small id="adoptersHelpBlock" class="form-text text-muted">
             "Alone" means without people to monitor eating, behavior, and going to the bathroom. For example, if you work in an office from 9am-5pm but come home from 12-1pm, then the longest time period alone would be 4 hours.
         </small>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="adoptersRadios" id="adoptersRadios1" value="0-3 hours" checked>
+            <input class="form-check-input" type="radio" name="availabilityRadios" id="adoptersRadios1" value="0-3 hours">
             <label class="form-check-label" for="adoptersRadios1">
             0-3 hours
             </label>
+            <span class="js-selection-alert-text">While we won’t limit your foster choices, you’d be a great candidate for a puppy, kitten, or animal with medical or behavioral needs. They need more care than most animals, and it’s rare that foster care providers can take in these pets.</span>
         </div>
-        <div>
-            <span>(If choose) While we won’t limit your foster choices, you’d be a great candidate for a puppy, kitten, or animal with medical or behavioral needs. They need more care than most animals, and it’s rare that foster care providers can take in these pets.</span>
-        </div>
+
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="adoptersRadios" id="adoptersRadios2" value="3-8 hours">
+            <input class="form-check-input" type="radio" name="availabilityRadios" id="adoptersRadios2" value="3-8 hours">
             <label class="form-check-label" for="adoptersRadios2">
             3-8 hours
             </label>
+            <span class="js-selection-alert-text">While we won’t limit your foster choices, you’d be a great candidate for an adult cat or dog with medical or behavioral needs. They need more care than most animals, and it’s rare that foster care providers can take in these pets.</span>
         </div>
-        <div>
-            <span>(If choose) While we won’t limit your foster choices, you’d be a great candidate for an adult cat or dog with medical or behavioral needs. They need more care than most animals, and it’s rare that foster care providers can take in these pets.</span>
-        </div>
+
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="adoptersRadios" id="adoptersRadios2" value="8-10 hours">
+            <input class="form-check-input" type="radio" name="availabilityRadios" id="adoptersRadios2" value="8-10 hours">
             <label class="form-check-label" for="adoptersRadios2">
             8-10 hours
             </label>
+            <span class="js-selection-alert-text">While we won’t limit your foster choices, you’d be a great candidate for healthy adult or senior dogs that don’t have a behavioral issues. They can generally be alone 8-10 hours at a time without problems. Also, healthy adult and senior cats can usually go 10 hours or more without a care in the world as long as they have access to everything that they need.</span>
         </div>
-        <div>
-            <span>(If choose) While we won’t limit your foster choices, you’d be a great candidate for healthy adult or senior dogs that don’t have a behavioral issues. They can generally be alone 8-10 hours at a time without problems. Also, healthy adult and senior cats can usually go 10 hours or more without a care in the world as long as they have access to everything that they need.</span>
-        </div>
+
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="adoptersRadios" id="adoptersRadios2" value="10+ hours">
+            <input class="form-check-input" type="radio" name="availabilityRadios" id="adoptersRadios2" value="10+ hours">
             <label class="form-check-label" for="adoptersRadios2">
             10+ hours
             </label>
+            <span class="js-selection-alert-text">Being gone for several hours is okay! While we won’t limit your foster choices, you’d be a great candidate for healthy adult and senior cats. They can usually go 10 hours or more without a care in the world as long as they have access to everything that they need.</span>
         </div>
-        <div>
-            <span>(If choose) Being gone for several hours is okay! While we won’t limit your foster choices, you’d be a great candidate for healthy adult and senior cats. They can usually go 10 hours or more without a care in the world as long as they have access to everything that they need.</span>
+
+        <div class="alert alert-info d-none js-left-alone-alert" role="alert">
+          <p class="js-left-alone-text"></p>
         </div>
     </div>
     <div>
