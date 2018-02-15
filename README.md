@@ -27,6 +27,9 @@ The project is a prototype of improved form design based on learnings from user 
 - Install [**jekyll**](https://github.com/postmodern/chruby) to install Jekyll.
 	- `gem install jekyll`
 
+- Install dependencies
+	- `bundle install`
+
 ## Start Jekyll
 
 Once you've got everything installed, 
