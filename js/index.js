@@ -58,7 +58,31 @@ $(document).ready(() => {
 
         var alertText = $(e.target).siblings('.js-selection-alert-text').text();
         $('.js-left-alone-alert').text(alertText);
-      })
+      });
+    }
+
+    return {
+      bindEventHandlers
+    }
+  })();
+
+  // INFO ABOUT YOUR HOME PAGE
+  var aboutYourselfPage = (() => {
+    var bindEventHandlers = () => {
+      $('.js-own-home-selection input').on('change', (e) => {
+        var hideAlert = e.target.value === "Yes";
+        $('.js-own-home-alert').toggleClass('d-none', hideAlert);
+      });
+
+      $('.js-indoors-selection input').on('change', (e) => {
+        var hideAlert = e.target.value === "Yes";
+        $('.js-indoors-alert').toggleClass('d-none', hideAlert);
+      });
+
+      $('.js-children input').on('change', (e) => {
+        var hideFollowup = e.target.value === "No";
+        $('.js-children-followup').toggleClass('d-none', hideFollowup);
+      });
     }
 
     return {
