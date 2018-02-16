@@ -1,5 +1,5 @@
 html, body {
-    font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: "Open Sans", sans-serif, "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 .container {
@@ -72,4 +72,20 @@ span {
 .progress-bar {
     border-right-style: solid;
     border-right-color: white;
+}
+
+.alert {
+    padding: 1.25rem 0.75rem 0.5rem 0.85rem;
+}
+
+.alert-warning {
+    color: #343a40;
+}
+
+.fa-exclamation-triangle {
+    padding: 0px;
+}
+
+.alert-body {
+    padding: 0rem 0.25rem 0rem .9rem;
 }
