@@ -100,14 +100,14 @@ $(document).ready(() => {
 
       $('.js-have-dog-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
-        if (dogCounter < 1) { addDogInfoBlock(); };
+        if (counter.dog < 1) { addDogInfoBlock(); };
         $('#js-new-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-dog-followup').toggleClass('d-none', hideFollowup);
       })
 
       $('.js-have-cat-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
-        if (catCounter < 1) { addCatInfoBlock(); };
+        if (counter.cat < 1) { addCatInfoBlock(); };
         $('#js-cat-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-cat-followup').toggleClass('d-none', hideFollowup);
       })
@@ -133,38 +133,53 @@ $(document).ready(() => {
       })
 
       // Add dog
-      var dogCounter = 0;
       $('.js-add-dog-trigger').on('click', (e) => {
         e.preventDefault();
         addDogInfoBlock();
-      })
-
-      function addDogInfoBlock () {
-        dogCounter++
-        var templateSource = $('#add-dog-template').html();
-        var templateCompiled = Handlebars.compile(templateSource);
-        var context = { dogNumber: dogCounter };
-        var html = templateCompiled(context);
-
-        $('#js-new-dog').append(html);
-      }
+      });
 
       // Add cat
-      var catCounter = 0;
       $('.js-add-cat-trigger').on('click', (e) => {
         e.preventDefault();
         addCatInfoBlock();
-      })
+      });
 
-      function addCatInfoBlock () {
-        catCounter++
-        var templateSource = $('#add-cat-template').html();
-        var templateCompiled = Handlebars.compile(templateSource);
-        var context = { catNumber: catCounter };
-        var html = templateCompiled(context);
+    };
 
-        $('#js-new-cat').append(html);
-      }
+    var counter = {
+      dog: 0,
+      cat: 0,
+    };
+
+    var addDogInfoBlock = () => {
+      counter.dog++
+      var templateSource = $('#add-dog-template').html();
+      var templateCompiled = Handlebars.compile(templateSource);
+      var context = { dogNumber: counter.dog };
+      var html = templateCompiled(context);
+
+      $('#js-new-dog').append(html);
+      initializeCloseInfoBlock('dog');
+    };
+
+    var addCatInfoBlock = () => {
+      counter.cat++
+      var templateSource = $('#add-cat-template').html();
+      var templateCompiled = Handlebars.compile(templateSource);
+      var context = { catNumber: counter.cat };
+      var html = templateCompiled(context);
+
+      $('#js-new-cat').append(html);
+      initializeCloseInfoBlock('cat');
+    };
+
+    var initializeCloseInfoBlock = (animal) => {
+      $('.js-close-animal-info').off();
+      $('.js-close-animal-info').on('click', (e) => {
+        e.preventDefault();
+        counter[animal]--
+        $(e.target).closest('.js-animal-info').remove();
+      });
     }
 
     return {
