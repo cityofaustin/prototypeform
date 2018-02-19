@@ -2,7 +2,10 @@
 {% raw %}
 
 <script id="add-cat-template" type="text/x-handlebars-template">
-  <div class="animal-info js-have-cat-followup js-add-cat-form-block">
+  <div class="animal-info js-have-cat-followup js-add-cat-form-block js-animal-info">
+    <button type="button" class="close js-close-animal-info" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <h5>(if yes to cats) Please fill in the information for Cat #{{ catNumber }}.</h5>
     <div class="form-row">
       <div class="form-group">

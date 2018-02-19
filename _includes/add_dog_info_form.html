@@ -1,8 +1,11 @@
 <!-- These raw tags are to prevent Jekyll from compiling -->
 {% raw %}
 <script id="add-dog-template" type="text/x-handlebars-template">
-  <div class="animal-info js-have-dog-followup js-add-dog-form-block">
-    <h5>(if yes to dogs) Please fill in the information for Dog {{ dogNumber }}.</h5>
+  <div class="animal-info js-have-dog-followup js-add-dog-form-block js-animal-info">
+    <button type="button" class="close js-close-animal-info" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5>Please fill in the information for Dog {{ dogNumber }}.</h5>
 
     <div class="form-row">
       <div class="form-group">
