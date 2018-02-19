@@ -47,60 +47,67 @@ layout: contact_sidebar
       </div>
     </div>
 
-    <div class="animal-info js-have-dog-followup d-none">
-      <h5>(if yes to dogs) Please fill in the information for Dog 1.</h5>
+    <!-- These raw tags are to prevent Jekyll from compiling -->
+    {% raw %}
+    <script id="add-dog-template" type="text/x-handlebars-template">
+      <div class="animal-info js-have-dog-followup js-add-dog-form-block">
+        <h5>(if yes to dogs) Please fill in the information for Dog {{ dogNumber }}.</h5>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="inputDog_name">Your dog's name</label>
-          <input type="text" class="form-control" id="inputDog_name" placeholder=" " aria-describedby="Dog_nameHelpBlock">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputDog_name">Your dog's name</label>
+            <input type="text" class="form-control" id="inputDog_name" placeholder=" " aria-describedby="Dog_nameHelpBlock">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputDog_age">Your dog's age</label>
+            <input type="number" class="form-control" id="inputDog_age" placeholder=" " aria-describedby="Dog_ageHelpBlock">
+          </div>
+        </div>
+        <h5>Your dog's weight</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios1" value="Small (Under 35 lbs)">
+          <label class="form-check-label" for="Dog_weightRadios1">
+          Small (Under 35 lbs)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios2" value="Medium (36-65 lbs)">
+          <label class="form-check-label" for="Dog_weightRadios2">
+          Medium (36-65 lbs)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios2" value="Large (65 lbs and higher)">
+          <label class="form-check-label" for="Dog_weightRadios2">
+          Large (65 lbs and higher)
+          </label>
+        </div>
+        <h5>Your dog's sex</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Dog_sexRadios" id="Dog_sexRadios1" value="Female">
+          <label class="form-check-label" for="Dog_sexRadios1">
+          Female
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Dog_sexRadios" id="Dog_sexRadios2" value="Male">
+          <label class="form-check-label" for="Dog_sexRadios2">
+          Male
+          </label>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="inputDog_age">Your dog's age</label>
-          <input type="number" class="form-control" id="inputDog_age" placeholder=" " aria-describedby="Dog_ageHelpBlock">
-        </div>
-      </div>
-      <h5>Your dog's weight</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios1" value="Small (Under 35 lbs)">
-        <label class="form-check-label" for="Dog_weightRadios1">
-        Small (Under 35 lbs)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios2" value="Medium (36-65 lbs)">
-        <label class="form-check-label" for="Dog_weightRadios2">
-        Medium (36-65 lbs)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Dog_weightRadios" id="Dog_weightRadios2" value="Large (65 lbs and higher)">
-        <label class="form-check-label" for="Dog_weightRadios2">
-        Large (65 lbs and higher)
-        </label>
-      </div>
-      <h5>Your dog's sex</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Dog_sexRadios" id="Dog_sexRadios1" value="Female">
-        <label class="form-check-label" for="Dog_sexRadios1">
-        Female
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Dog_sexRadios" id="Dog_sexRadios2" value="Male">
-        <label class="form-check-label" for="Dog_sexRadios2">
-        Male
-        </label>
-      </div>
-    </div>
+    </script>
+    {% endraw %}
+    <div id="js-new-dog"></div>
+
 
     <div class="js-have-dog-followup d-none">
-      <a class="btn btn-primary" href="#" role="button">+</a>
+      <button class="btn btn-primary js-add-dog-trigger" href="#" role="button">+</button>
       <span>Add another dog</span>
       <small id="add_dogHelpInline" class="text-muted">
-          Optional
+        Optional
       </small>
     </div>
     <div class="js-have-dog-followup d-none">

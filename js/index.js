@@ -76,6 +76,8 @@ $(document).ready(() => {
 
       $('.js-have-dog-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
+        if (dogCounter < 1) { addDogInfoBlock(); };
+        $('#js-new-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-dog-followup').toggleClass('d-none', hideFollowup);
       })
 
@@ -103,6 +105,23 @@ $(document).ready(() => {
         var hideAlert = e.target.value === 'Yes';
         $('.js-seperate-animals-alert').toggleClass('d-none', hideAlert);
       })
+
+      // Add dog
+      var dogCounter = 0;
+      $('.js-add-dog-trigger').on('click', (e) => {
+        e.preventDefault();
+        addDogInfoBlock();
+      })
+
+      function addDogInfoBlock () {
+        dogCounter++
+        var templateSource = $('#add-dog-template').html();
+        var templateCompiled = Handlebars.compile(templateSource);
+        var context = { dogNumber: dogCounter };
+        var html = templateCompiled(context);
+
+        $('#js-new-dog').append(html);
+      }
     }
 
     return {
