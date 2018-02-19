@@ -89,59 +89,27 @@ layout: contact_sidebar
   </div>
 
 
+  <div class="js-have-cat-selection js-have-animals-followup d-none">
+    <h5>(if yes to question 1) Do any cats live in your home?</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios1" value="Yes">
+      <label class="form-check-label" for="catsRadios1">
+      Yes
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios2" value="No">
+      <label class="form-check-label" for="catsRadios2">
+      No
+      </label>
+    </div>
+  </div>
+
+
+  {% include add_cat_info_form.html %}
+
 
   <div class="d-none js-have-animals-followup">
-    <div class="js-have-cat-selection">
-      <h5>(if yes to question 1) Do any cats live in your home?</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios1" value="Yes">
-        <label class="form-check-label" for="catsRadios1">
-          Yes
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios2" value="No">
-        <label class="form-check-label" for="catsRadios2">
-          No
-        </label>
-      </div>
-    </div>
-
-    <div class="animal-info d-none js-have-cat-followup">
-      <h5>(if yes to cats) Please fill in the information for Cat 1.</h5>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="inputCat_name">Your cat's name</label>
-          <input type="text" class="form-control" id="inputCat_name" placeholder=" " aria-describedby="Cat_nameHelpBlock">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="inputCat_age">Your cat's age</label>
-          <input type="number" class="form-control" id="inputCat_age" placeholder=" " aria-describedby="Cat_ageHelpBlock">
-        </div>
-      </div>
-      <h5>Your cat's sex</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Cat_sexRadios" id="Cat_sexRadios1" value="Female">
-        <label class="form-check-label" for="Cat_sexRadios1">
-        Female
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="Cat_sexRadios" id="Cat_sexRadios2" value="Male">
-        <label class="form-check-label" for="Cat_sexRadios2">
-        Male
-        </label>
-      </div>
-    </div>
-    <div class="d-none js-have-cat-followup">
-      <a class="btn btn-primary" href="#" role="button">+</a>
-      <span>Add another cat</span>
-      <small id="add_CatHelpInline" class="text-muted">
-        Optional
-      </small>
-    </div>
     <div class="d-none js-have-cat-followup">
       <h5>(if yes to cats) Are all of your cats spayed or neutered?</h5>
       <div class="form-check">

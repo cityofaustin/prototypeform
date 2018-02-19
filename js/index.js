@@ -83,6 +83,8 @@ $(document).ready(() => {
 
       $('.js-have-cat-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
+        if (catCounter < 1) { addCatInfoBlock(); };
+        $('#js-cat-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-cat-followup').toggleClass('d-none', hideFollowup);
       })
 
@@ -121,6 +123,23 @@ $(document).ready(() => {
         var html = templateCompiled(context);
 
         $('#js-new-dog').append(html);
+      }
+
+      // Add cat
+      var catCounter = 0;
+      $('.js-add-cat-trigger').on('click', (e) => {
+        e.preventDefault();
+        addCatInfoBlock();
+      })
+
+      function addCatInfoBlock () {
+        catCounter++
+        var templateSource = $('#add-cat-template').html();
+        var templateCompiled = Handlebars.compile(templateSource);
+        var context = { catNumber: catCounter };
+        var html = templateCompiled(context);
+
+        $('#js-new-cat').append(html);
       }
     }
 
