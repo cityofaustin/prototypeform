@@ -100,11 +100,15 @@ $(document).ready(() => {
 
       $('.js-have-dog-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
+        if (counter.dog < 1) { addDogInfoBlock(); };
+        $('#js-new-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-dog-followup').toggleClass('d-none', hideFollowup);
       })
 
       $('.js-have-cat-selection input').on('change', (e) => {
         var hideFollowup = e.target.value === 'No';
+        if (counter.cat < 1) { addCatInfoBlock(); };
+        $('#js-cat-dog').toggleClass('d-none', hideFollowup);
         $('.js-have-cat-followup').toggleClass('d-none', hideFollowup);
       })
 
@@ -127,6 +131,55 @@ $(document).ready(() => {
         var hideAlert = e.target.value === 'Yes';
         $('.js-seperate-animals-alert').toggleClass('d-none', hideAlert);
       })
+
+      // Add dog
+      $('.js-add-dog-trigger').on('click', (e) => {
+        e.preventDefault();
+        addDogInfoBlock();
+      });
+
+      // Add cat
+      $('.js-add-cat-trigger').on('click', (e) => {
+        e.preventDefault();
+        addCatInfoBlock();
+      });
+
+    };
+
+    var counter = {
+      dog: 0,
+      cat: 0,
+    };
+
+    var addDogInfoBlock = () => {
+      counter.dog++
+      var templateSource = $('#add-dog-template').html();
+      var templateCompiled = Handlebars.compile(templateSource);
+      var context = { dogNumber: counter.dog };
+      var html = templateCompiled(context);
+
+      $('#js-new-dog').append(html);
+      initializeCloseInfoBlock('dog');
+    };
+
+    var addCatInfoBlock = () => {
+      counter.cat++
+      var templateSource = $('#add-cat-template').html();
+      var templateCompiled = Handlebars.compile(templateSource);
+      var context = { catNumber: counter.cat };
+      var html = templateCompiled(context);
+
+      $('#js-new-cat').append(html);
+      initializeCloseInfoBlock('cat');
+    };
+
+    var initializeCloseInfoBlock = (animal) => {
+      $('.js-close-animal-info').off();
+      $('.js-close-animal-info').on('click', (e) => {
+        e.preventDefault();
+        counter[animal]--
+        $(e.target).closest('.js-animal-info').remove();
+      });
     }
 
     return {

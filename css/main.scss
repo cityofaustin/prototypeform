@@ -1,3 +1,8 @@
+---
+# Entry Point Sass file for project. More Sass files may be added to _sass/
+# More info: http://markdotto.com/2014/09/25/sass-and-jekyll/
+---
+
 html, body {
     font-family: "Open Sans", sans-serif, "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
@@ -65,7 +70,14 @@ span {
     padding-left: 30px;
     padding-bottom: 20px;
     padding-right: 30px;
+<<<<<<< HEAD:css/main.css
     margin-top: 1rem;
+=======
+    margin: 10px 0;
+    .close {
+      margin: 5px -20px;
+    }
+>>>>>>> origin/master:css/main.scss
 }
 
 .progress {
