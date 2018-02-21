@@ -46,9 +46,11 @@ span {
 .small, small {
     font-size: 90%;
     font-weight: 400;
+    font-family: 'Lora', serif;
+    margin-bottom: .5rem;
 }
 
-.form-group, .form-check, h1, h2, h3, h4, h5, p, li, span, small {
+.form-group, .form-check, .js-explanation-field, h1, h2, h3, h4, h5, p, li, span, small {
     max-width: 545px;
 }
 
@@ -63,6 +65,7 @@ span {
     padding-left: 30px;
     padding-bottom: 20px;
     padding-right: 30px;
+    margin-top: 1rem;
 }
 
 .progress {
@@ -76,6 +79,8 @@ span {
 
 .alert {
     padding: 1.25rem 0.75rem 0.5rem 0.85rem;
+    font-family: 'Lora', serif;
+    margin-top: 1rem;
 }
 
 .alert-warning {
@@ -84,6 +89,10 @@ span {
 
 .fa-exclamation-triangle {
     padding: 0px;
+}
+
+.fa-plus-circle {
+    color: #007bff;
 }
 
 .alert-body {

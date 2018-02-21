@@ -34,6 +34,21 @@ layout: contact_sidebar
     <div>
         {% include add_explanation.html %}
     </div>
+    <!-- 2 below 'add explanation' entries to review visual difference only. Once visual styling determined, replace 'add explanation' function -->
+    <div class="js-add-explanation">
+        <a href="#">+ Add additional information</a>
+        <small id="add_explanationHelpInline" class="text-muted">
+          Optional
+        </small>
+        <textarea class="d-none js-explanation-field form-control" name="name" rows="3" cols="80"></textarea>
+    </div>
+    <div>
+        <i class="fas fa-plus-circle"></i>
+        <span>Add additional information</span>
+        <small id="add_explanationHelpInline" class="text-muted">
+            Optional
+        </small>
+    </div>
     <div class="js-indoors-selection">
         <h5>Are you planning to have your foster animal live indoors?</h5>
         <div class="form-check">
