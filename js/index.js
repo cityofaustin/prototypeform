@@ -67,7 +67,7 @@ $(document).ready(() => {
   })();
 
   // INFO ABOUT YOUR HOME PAGE
-  var aboutYourselfPage = (() => {
+  var aboutYourHomePage = (() => {
     var bindEventHandlers = () => {
       $('.js-own-home-selection input').on('change', (e) => {
         var hideAlert = e.target.value === "Yes";
@@ -189,6 +189,7 @@ $(document).ready(() => {
 
   explanationField.init();
   aboutYourselfPage.bindEventHandlers();
+  aboutYourHomePage.bindEventHandlers();
   aboutAvailabilityPage.bindEventHandlers();
   aboutAnimalsPage.bindEventHandlers();
 });
