@@ -54,10 +54,9 @@ $(document).ready(() => {
   var aboutAvailabilityPage = (() => {
     var bindEventHandlers = () => {
       $('.js-left-alone-selection').on('change', (e) => {
-        $('.js-left-alone-alert').removeClass('d-none');
-
-        var alertText = $(e.target).siblings('.js-selection-alert-text').text();
-        $('.js-left-alone-alert').text(alertText);
+        $('.js-selection-alert-text').addClass('d-none');
+        $(e.target).next('.js-selection-alert-text').removeClass('d-none');
+        debugger;
       });
     }
 
