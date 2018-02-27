@@ -52,12 +52,11 @@ $(document).ready(() => {
 
   // INFO ABOUT YOUR AVAILABILITY PAGE
   var aboutAvailabilityPage = (() => {
+    var $parent = $('.js-form-availability');
     var bindEventHandlers = () => {
-      $('.js-left-alone-selection').on('change', (e) => {
-        $('.js-left-alone-alert').removeClass('d-none');
-
-        var alertText = $(e.target).siblings('.js-selection-alert-text').text();
-        $('.js-left-alone-alert').text(alertText);
+      $parent.on('change', 'input', (e) => {
+        $parent.find('.js-selection-alert-text').addClass('d-none');
+        $(e.currentTarget).siblings('.js-selection-alert-text').removeClass('d-none');
       });
     }
 
