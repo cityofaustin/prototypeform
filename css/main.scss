@@ -11,6 +11,10 @@ html, body {
     margin-top: 20px;
 }
 
+.col-md-4 {
+    padding-bottom: 1rem;
+}
+
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -34,7 +38,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     margin-top: 2rem;
 }
@@ -51,8 +55,11 @@ span {
 .small, small {
     font-size: 90%;
     font-weight: 400;
-    font-family: 'Lora', serif;
     margin-bottom: .5rem;
+}
+
+.text-muted {
+    color: #240b33;
 }
 
 .form-group, .form-check, .js-explanation-field, h1, h2, h3, h4, h5, p, li, span, small, .alert {
@@ -91,15 +98,15 @@ span {
 
 .alert {
     padding: 1.25rem 0.75rem 0.5rem 0.85rem;
-    font-family: 'Lora', serif;
     margin-top: 1rem;
+    margin-right: 0.4rem;
 }
 
 .alert-warning {
     color: #343a40;
 }
 
-.fa-exclamation-triangle, .fa-times-circle, .fa-info-circle {
+.fa-exclamation-triangle, .fa-times-circle, .fa-info-circle, .fa-ban, {
     padding: 0px;
 }
 
