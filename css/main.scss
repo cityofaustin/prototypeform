@@ -13,7 +13,6 @@ html, body {
 
 .col-md-4 {
     padding-bottom: 1rem;
-    padding-left: 1rem;
 }
 
 h1 {
@@ -30,13 +29,12 @@ h2 {
 h3 {
     font-size: 1.7rem;
     font-weight: 625;
-    margin-top: 5rem;
 }
 
 h4 {
     font-size: 1.3rem;
     font-weight: 625;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 h5 {
@@ -128,15 +126,4 @@ span {
 
 .alert-body {
     padding: 0rem 0.25rem 0rem .9rem;
-}
-
-.call-out {
-    margin-left: 2rem;
-    padding-left: 1rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-left: #ced4da;
-    border-left-style: solid;
-    border-left-width: 8px;
 }
