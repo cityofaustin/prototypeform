@@ -22,15 +22,20 @@ layout: contact_sidebar
           No
           </label>
           <div class="alert alert-danger d-none js-age-disqualifier-alert row" role="alert">
-            <i class="fas fa-times-circle fa-2x fa-fw col-md-1"></i>
+            <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
             <div class="col-md-11 alert-body">
-              <p>Unfortunately, we cannot accept your application at this time. Please ask a member of your household who is over 18 to apply. If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+              <p>Unfortunately, we cannot accept your application at this time.</p>
+              <p>Please ask a member of your household who is over 18 to apply.</p>
+              <p>If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
             </div>
           </div>
       </div>
     </div>
     <div class="js-transportation-selection">
-      <h5>We provide all veterinary care at no cost to you. Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
+      <h5>Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
+      <small id="transportationHelpBlock" class="form-text text-muted">
+          We provide all veterinary care at no cost to you.
+      </small>
       <div class="form-check">
           <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes">
           <label class="form-check-label" for="transportationRadios1">
@@ -43,9 +48,11 @@ layout: contact_sidebar
           No
           </label>
           <div class="alert alert-danger d-none js-transportation-alert row" role="alert">
-            <i class="fas fa-times-circle fa-2x fa-fw col-md-1"></i>
+            <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
             <div class="col-md-11 alert-body">
-              <p>Unfortunately, we cannot accept your application at this time. Foster animals must receive veterinary care immediately especially in the event of an emergency, or they could experience permanent damage, trauma, or worse, could die. Please reapply if you get reliable transportation. Thank you for helping us ensure the safety of our animals, and if you would like to help in other ways, please visit <a href="http://www.austintexas.gov/department/volunteer">our volunteer page</a>.</p>
+              <p>Unfortunately, we cannot accept your application at this time.</p> 
+              <p>Foster animals must receive veterinary care immediately, especially in the event of an emergency. Please reapply if you get reliable transportation.</p>
+              <p>Thank you for helping us ensure the safety of our animals, and if you would like to help in other ways, please visit <a href="http://www.austintexas.gov/department/volunteer">our volunteer page</a>.</p>
             </div>
           </div>
       </div>
@@ -54,7 +61,10 @@ layout: contact_sidebar
         {% include add_explanation.html %}
     </div>
     <div class="js-medications-selection">
-      <h5>We provide all medications at no cost to you. If necessary, can you come to the Austin Animal Center once a month to pick up heartworm and parasite preventative medications?</h5>
+      <h5>If necessary, can you come to the Austin Animal Center once a month to pick up heartworm and parasite preventative medications?</h5>
+      <small id="medicationsHelpBlock" class="form-text text-muted">
+          We provide all medications at no cost to you. 
+      </small>
       <div class="form-check">
           <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios1" value="Yes">
           <label class="form-check-label" for="medicationRadios1">
@@ -70,7 +80,8 @@ layout: contact_sidebar
       <div class="alert alert-warning d-none js-medications-alert row" role="alert">
           <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
           <div class="col-md-11 alert-body">
-            <p>It is vital that foster animals receive their medication for their health and the health of animals around them. You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</p>
+            <p>You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</p>
+            <p>It is vital that foster animals receive their medication for their health and the health of animals around them.</p>
           </div>  
       </div>
     </div>
@@ -94,7 +105,8 @@ layout: contact_sidebar
       <div class="alert alert-warning d-none js-humane-alert row" role="alert">
           <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
           <div class="col-md-11 alert-body">
-            <p>While we do not ask that you stop supporting other organizations, we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time. This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</p>
+            <p>While we do not ask that you stop supporting other organizations, we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time.</p>
+            <p>This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</p>
           </div>    
       </div>
     </div>
