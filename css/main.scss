@@ -43,6 +43,14 @@ h5 {
     margin-top: 2rem;
 }
 
+p, ul, li, b {
+    font-size: 1.1rem;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
 .btn {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -64,6 +72,7 @@ span {
 
 .form-group, .form-check, .js-explanation-field, h1, h2, h3, h4, h5, p, li, span, small, .alert {
     max-width: 545px;
+    color: #191919;
 }
 
 .form-group {
@@ -100,6 +109,7 @@ span {
     padding: 1.25rem 0.75rem 0.5rem 0.85rem;
     margin-top: 1rem;
     margin-right: 0.4rem;
+    font-size: 1.1rem;
 }
 
 .alert-warning {
