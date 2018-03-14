@@ -29,6 +29,11 @@ $(document).ready(() => {
         // TODO: Disable form if they are disqualified
       });
 
+      $('.js-adopters-help-selection input').on('change', (e) => {
+        var hideAlert = e.target.value === "Yes";
+        $('.js-adopters-help-alert').toggleClass('d-none', hideAlert);
+      });
+
       $('.js-medications-selection input').on('change', (e) => {
         var hideAlert = e.target.value === "Yes";
         $('.js-medications-alert').toggleClass('d-none', hideAlert);
