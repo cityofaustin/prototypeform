@@ -9,27 +9,29 @@ layout: contact_sidebar
 <h2>Tell us about yourself</h2>
 <form>
     <div class="js-age-selection">
-      <h5>Are you age 18 or older?</h5>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes">
-          <label class="form-check-label" for="applicant_ageRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios2" value="No">
-          <label class="form-check-label" for="applicant_ageRadios2">
-          No
-          </label>
-          <div class="alert alert-danger d-none js-age-disqualifier-alert row" role="alert">
-            <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
-            <div class="col-md-11 alert-body">
-              <p>Unfortunately, we cannot accept your application at this time.</p>
-              <p>Please ask a member of your household who is over 18 to apply.</p>
-              <p>If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+      <fieldset>
+        <legend>Are you age 18 or older?</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes">
+            <label class="form-check-label" for="applicant_ageRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios2" value="No">
+            <label class="form-check-label" for="applicant_ageRadios2">
+            No
+            </label>
+            <div class="alert alert-danger d-none js-age-disqualifier-alert row" role="alert">
+              <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
+              <div class="col-md-11 alert-body">
+                <p>Unfortunately, we cannot accept your application at this time.</p>
+                <p>Please ask a member of your household who is over 18 to apply.</p>
+                <p>If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+              </div>
             </div>
-          </div>
-      </div>
+        </div>
+      </fieldset>
     </div>
     <div class="js-transportation-selection">
       <h5>Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
@@ -161,7 +163,7 @@ layout: contact_sidebar
   <div class="form-row d-none js-exisiting-animal-followup">
     <div class="form-group col-md-6">
       <label for="inputAnimal_interested">Which animal is it?</label>
-      <input type="text" class="form-control" id="inputAnimal_interested" placeholder=" " aria-describedby="Animal_interestedHelpBlock">
+      <input type="text" class="form-control" id="inputAnimal_interested" placeholder=" " aria-describedby="animal_interestedHelpBlock">
     </div>
   </div>
   <a class="btn btn-primary" href="Availability_info.html" role="button">Next</a>
