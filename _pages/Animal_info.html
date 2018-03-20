@@ -14,73 +14,81 @@ layout: contact_sidebar
 
 <form>
   <div class="js-have-animals-selection">
-    <h5>Do you currently have any animals in your home?</h5>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="animalsRadios" id="animalsRadios1" value="Yes">
-      <label class="form-check-label" for="animalsRadios1">
-      Yes
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="animalsRadios" id="animalsRadios2" value="No">
-      <label class="form-check-label" for="animalsRadios2">
-      No
-      </label>
-    </div>
-  </div>
-
-  <div class="d-none js-have-animals-followup">
-
-    <h5>Do any dogs live in your home?</h5>
-    <div class="js-have-dog-selection">
+    <fieldset>
+      <legend>Do you currently have any animals in your home?</legend>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="dogsRadios" id="dogsRadios1" value="Yes">
-        <label class="form-check-label" for="dogsRadios1">
+        <input class="form-check-input" type="radio" name="animalsRadios" id="animalsRadios1" value="Yes">
+        <label class="form-check-label" for="animalsRadios1">
         Yes
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="dogsRadios" id="dogsRadios2" value="No">
-        <label class="form-check-label" for="dogsRadios2">
+        <input class="form-check-input" type="radio" name="animalsRadios" id="animalsRadios2" value="No">
+        <label class="form-check-label" for="animalsRadios2">
         No
         </label>
       </div>
-    </div>
+    </fieldset>
+  </div>
+
+  <div class="d-none js-have-animals-followup">
+    
+    <fieldset>
+      <legend>Do any dogs live in your home?</legend>
+      <div class="js-have-dog-selection">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="dogsRadios" id="dogsRadios1" value="Yes">
+          <label class="form-check-label" for="dogsRadios1">
+          Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="dogsRadios" id="dogsRadios2" value="No">
+          <label class="form-check-label" for="dogsRadios2">
+          No
+          </label>
+        </div>
+      </div>
+    </fieldset>
 
     {% include add_dog_info_form.html %}
 
     <div class="js-have-dog-followup d-none">
-      <h5>Are all of your dogs spayed or neutered?</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="dog_spayedRadios" id="dog_spayedRadios1" value="Yes">
-        <label class="form-check-label" for="dog_spayedRadios1">
-        Yes
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="dog_spayedRadios" id="dog_spayedRadios2" value="No">
-        <label class="form-check-label" for="dog_spayedRadios2">
-        No
-        </label>
-      </div>
+      <fieldset>
+        <legend>Are all of your dogs spayed or neutered?</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="dog_spayedRadios" id="dog_spayedRadios1" value="Yes">
+          <label class="form-check-label" for="dog_spayedRadios1">
+          Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="dog_spayedRadios" id="dog_spayedRadios2" value="No">
+          <label class="form-check-label" for="dog_spayedRadios2">
+          No
+          </label>
+        </div>
+      </fieldset>
       {% include add_explanation.html %}
     </div>
 
     <div class="js-have-dog-followup d-none form-group">
       <div class="js-dog-rabies-selector">
-        <h5>Do all of the above dogs have current rabies vaccinations?</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="dog_rabiesRadios" id="dog_rabiesRadios1" value="Yes">
-          <label class="form-check-label" for="dog_rabiesRadios1">
-          Yes
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="dog_rabiesRadios" id="dog_rabiesRadios2" value="No">
-          <label class="form-check-label" for="dog_rabiesRadios2">
-          No
-          </label>
-        </div>
+        <fieldset>
+          <legend>Do all of the above dogs have current rabies vaccinations?</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dog_rabiesRadios" id="dog_rabiesRadios1" value="Yes">
+            <label class="form-check-label" for="dog_rabiesRadios1">
+            Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dog_rabiesRadios" id="dog_rabiesRadios2" value="No">
+            <label class="form-check-label" for="dog_rabiesRadios2">
+            No
+            </label>
+          </div>
+        </fieldset>
       </div>
       <div class="alert alert-warning d-none js-dog-rabies-alert row" role="alert">
           <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
@@ -94,19 +102,21 @@ layout: contact_sidebar
   </div>
 
   <div class="js-have-cat-selection js-have-animals-followup d-none">
-    <h5>Do any cats live in your home?</h5>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios1" value="Yes">
-      <label class="form-check-label" for="catsRadios1">
-      Yes
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios2" value="No">
-      <label class="form-check-label" for="catsRadios2">
-      No
-      </label>
-    </div>
+    <fieldset>
+      <legend>Do any cats live in your home?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios1" value="Yes">
+        <label class="form-check-label" for="catsRadios1">
+        Yes
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="catsRadios" id="catsRadios2" value="No">
+        <label class="form-check-label" for="catsRadios2">
+        No
+        </label>
+      </div>
+    </fieldset>
   </div>
 
 
@@ -115,37 +125,41 @@ layout: contact_sidebar
 
   <div class="d-none js-have-animals-followup">
     <div class="d-none js-have-cat-followup">
-      <h5>Are all of your cats spayed or neutered?</h5>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="cat_spayedRadios" id="cat_spayedRadios1" value="Yes">
-          <label class="form-check-label" for="cat_spayedRadios1">
-          Yes
+      <fieldset>
+        <legend>Are all of your cats spayed or neutered?</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="cat_spayedRadios" id="cat_spayedRadios1" value="Yes">
+            <label class="form-check-label" for="cat_spayedRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="cat_spayedRadios" id="cat_spayedRadios2" value="No">
+          <label class="form-check-label" for="cat_spayedRadios2">
+          No
           </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="cat_spayedRadios" id="cat_spayedRadios2" value="No">
-        <label class="form-check-label" for="cat_spayedRadios2">
-        No
-        </label>
-      </div>
+        </div>
+      </fieldset>
       {% include add_explanation.html %}
     </div>
 
     <div class="d-none js-have-cat-followup">
       <div class="js-cat-rabies-selector">
-        <h5>Do all of the above cats have current rabies vaccinations?</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="cat_rabiesRadios" id="cat_rabiesRadios1" value="Yes">
-          <label class="form-check-label" for="cat_rabiesRadios1">
-            Yes
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="cat_rabiesRadios" id="cat_rabiesRadios2" value="No">
-          <label class="form-check-label" for="cat_rabiesRadios2">
-            No
-          </label>
-        </div>
+        <fieldset>
+          <legend>Do all of the above cats have current rabies vaccinations?</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cat_rabiesRadios" id="cat_rabiesRadios1" value="Yes">
+            <label class="form-check-label" for="cat_rabiesRadios1">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cat_rabiesRadios" id="cat_rabiesRadios2" value="No">
+            <label class="form-check-label" for="cat_rabiesRadios2">
+              No
+            </label>
+          </div>
+        </fieldset>
       </div>
       <div class="alert alert-warning d-none js-cat-rabies-alert row" role="alert">
           <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
@@ -161,19 +175,21 @@ layout: contact_sidebar
 
   <div class="d-none js-have-animals-followup">
     <div class="js-have-other-selection">
-      <h5>Do any other types of animals live in your home?</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="other_animalsRadios" id="other_animalsRadios1" value="Yes">
-        <label class="form-check-label" for="other_animalsRadios1">
-          Yes
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="other_animalsRadios" id="other_animalsRadios2" value="No">
-        <label class="form-check-label" for="other_animalsRadios2">
-          No
-        </label>
-      </div>
+      <fieldset>
+        <legend>Do any other types of animals live in your home?</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="other_animalsRadios" id="other_animalsRadios1" value="Yes">
+          <label class="form-check-label" for="other_animalsRadios1">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="other_animalsRadios" id="other_animalsRadios2" value="No">
+          <label class="form-check-label" for="other_animalsRadios2">
+            No
+          </label>
+        </div>
+      </fieldset>
     </div>
 
     <div class="js-have-other-followup d-none form-group">
@@ -184,28 +200,30 @@ layout: contact_sidebar
 
   <div class="d-none js-have-animals-followup form-group">
     <div class="js-seperate-animals-selector">
-      <h5>Inside your home, are you able to separate your foster animals from your own animals if needed?</h5>
-      <small id="separateHelpBlock" class="form-text text-muted">
-        If the foster animal has new vaccinations or becomes ill, they and your animals should be separated for each other's safety and well-being.
-      </small>
-      <div class="form-check">
-          <input class="form-check-input" aria-describedby="separateHelpBlock" type="radio" name="separateRadios" id="separateRadios1" value="Yes">
-          <label class="form-check-label" for="separateRadios1">
-          Yes
+      <fieldset>
+        <legend>Inside your home, are you able to separate your foster animals from your own animals if needed?</legend>
+        <small id="separateHelpBlock" class="form-text text-muted">
+          If the foster animal has new vaccinations or becomes ill, they and your animals should be separated for each other's safety and well-being.
+        </small>
+        <div class="form-check">
+            <input class="form-check-input" aria-describedby="separateHelpBlock" type="radio" name="separateRadios" id="separateRadios1" value="Yes">
+            <label class="form-check-label" for="separateRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="separateRadios" id="separateRadios2" value="No">
+          <label class="form-check-label" for="separateRadios2">
+          No
           </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="separateRadios" id="separateRadios2" value="No">
-        <label class="form-check-label" for="separateRadios2">
-        No
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="separateRadios" id="separateRadios3" value="Maybe">
-        <label class="form-check-label" for="separateRadios3">
-        Maybe
-        </label>
-      </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="separateRadios" id="separateRadios3" value="Maybe">
+          <label class="form-check-label" for="separateRadios3">
+          Maybe
+          </label>
+        </div>
+      </fieldset>
     </div>
     <div class="alert alert-warning d-none js-seperate-animals-alert row" role="alert">
         <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
