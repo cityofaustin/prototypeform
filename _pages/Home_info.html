@@ -11,26 +11,28 @@ layout: contact_sidebar
 <h2>Tell us about your home</h2>
 <form>
     <div class="js-own-home-selection">
-        <h5>Do you own your home?</h5>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="landlordRadios" id="landlordRadios1" value="Yes">
-            <label class="form-check-label" for="landlordRadios1">
-            Yes
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="landlordRadios" id="landlordRadios2" value="No">
-            <label class="form-check-label" for="landlordRadios2">
-            No
-            </label>
-            <div class="alert alert-warning d-none js-own-home-alert row" role="alert">
-                <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
-                <div class="col-md-11 alert-body">
-                    <p>Make sure you get permission from the homeowner or property management to have pets in the home, and identify if there are breed or weight restrictions for dogs. </p>
-                    <p>If you need help getting permission from the homeowner or property management, let us know.</p>
+        <fieldset>
+            <legend>Do you own your home?</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="landlordRadios" id="landlordRadios1" value="Yes">
+                <label class="form-check-label" for="landlordRadios1">
+                Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="landlordRadios" id="landlordRadios2" value="No">
+                <label class="form-check-label" for="landlordRadios2">
+                No
+                </label>
+                <div class="alert alert-warning d-none js-own-home-alert row" role="alert">
+                    <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+                    <div class="col-md-11 alert-body">
+                        <p>Make sure you get permission from the homeowner or property management to have pets in the home, and identify if there are breed or weight restrictions for dogs. </p>
+                        <p>If you need help getting permission from the homeowner or property management, let us know.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
@@ -51,59 +53,63 @@ layout: contact_sidebar
         </small>
     </div> -->
     <div class="js-indoors-selection">
-        <h5>Are you planning to have your foster animal live indoors?</h5>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios1" value="Yes">
-            <label class="form-check-label" for="can_indoorsRadios1">
-            Yes
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios2" value="No">
-            <label class="form-check-label" for="can_indoorsRadios2">
-            No
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios3" value="Maybe">
-            <label class="form-check-label" for="can_indoorsRadios3">
-            Maybe
-            </label>
-            <div class="alert alert-warning d-none js-indoors-alert row" role="alert">
-                <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
-                <div class="col-md-11 alert-body">
-                    <p>You may continue the application, but before bringing home a foster animal, make sure it can reside indoors:</p>
-                    <ul>
-                        <li>Kittens and cats should only be kept indoors, because there’s a high risk of them running away.</li>
-                        <li>Puppies and dogs should be kept primarily indoors, but can go outside for potty breaks, play time, and exercise.</li>
-                    </ul>
-                    <p>If you don't think you'll be able to have your foster animal live indoors, please let us know and we may be able to help you figure out a solution.</p>
+        <fieldset>
+            <legend>Are you planning to have your foster animal live indoors?</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios1" value="Yes">
+                <label class="form-check-label" for="can_indoorsRadios1">
+                Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios2" value="No">
+                <label class="form-check-label" for="can_indoorsRadios2">
+                No
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="can_indoorsRadios" id="can_indoorsRadios3" value="Maybe">
+                <label class="form-check-label" for="can_indoorsRadios3">
+                Maybe
+                </label>
+                <div class="alert alert-warning d-none js-indoors-alert row" role="alert">
+                    <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+                    <div class="col-md-11 alert-body">
+                        <p>You may continue the application, but before bringing home a foster animal, make sure it can reside indoors:</p>
+                        <ul>
+                            <li>Kittens and cats should only be kept indoors, because there’s a high risk of them running away.</li>
+                            <li>Puppies and dogs should be kept primarily indoors, but can go outside for potty breaks, play time, and exercise.</li>
+                        </ul>
+                        <p>If you don't think you'll be able to have your foster animal live indoors, please let us know and we may be able to help you figure out a solution.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
     <div class="js-children">
-        <h5>Do any children under 18 living in your home?</h5>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="childrenRadios" id="childrenRadios1" value="Yes">
-            <label class="form-check-label" for="childrenRadios1">
-            Yes
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="childrenRadios" id="childrenRadios2" value="No">
-            <label class="form-check-label" for="childrenRadios2">
-            No
-            </label>
-        </div>
+        <fieldset>
+            <legend>Do any children under 18 living in your home?</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="childrenRadios" id="childrenRadios1" value="Yes">
+                <label class="form-check-label" for="childrenRadios1">
+                Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="childrenRadios" id="childrenRadios2" value="No">
+                <label class="form-check-label" for="childrenRadios2">
+                No
+                </label>
+            </div>
+        </fieldset>
     </div>
     <div class="form-row d-none js-children-followup">
         <div class="form-group col-md-6">
           <label for="inputChildren">Please list the ages of all children under 18 living in your home.</label>
-          <input type="text" class="form-control" id="inputChildren" placeholder=" " aria-describedby="ChildrenHelpBlock">
+          <input type="text" class="form-control" id="inputChildren" placeholder=" ">
         </div>
     </div>
     <a class="btn btn-primary" href="Animal_info.html" role="button">Next</a>

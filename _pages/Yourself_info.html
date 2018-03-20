@@ -9,159 +9,170 @@ layout: contact_sidebar
 <h2>Tell us about yourself</h2>
 <form>
     <div class="js-age-selection">
-      <h5>Are you age 18 or older?</h5>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes">
-          <label class="form-check-label" for="applicant_ageRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios2" value="No">
-          <label class="form-check-label" for="applicant_ageRadios2">
-          No
-          </label>
-          <div class="alert alert-danger d-none js-age-disqualifier-alert row" role="alert">
-            <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
-            <div class="col-md-11 alert-body">
-              <p>Unfortunately, we cannot accept your application at this time.</p>
-              <p>Please ask a member of your household who is over 18 to apply.</p>
-              <p>If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+      <fieldset>
+        <legend>Are you age 18 or older?</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios1" value="Yes">
+            <label class="form-check-label" for="applicant_ageRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="applicant_ageRadios" id="applicant_ageRadios2" value="No">
+            <label class="form-check-label" for="applicant_ageRadios2">
+            No
+            </label>
+            <div class="alert alert-danger d-none js-age-disqualifier-alert row" role="alert">
+              <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
+              <div class="col-md-11 alert-body">
+                <p>Unfortunately, we cannot accept your application at this time.</p>
+                <p>Please ask a member of your household who is over 18 to apply.</p>
+                <p>If you are applying to fulfill volunteer hours, you can still foster and receive credit even though someone else filled out the application.</p>
+              </div>
             </div>
-          </div>
-      </div>
+        </div>
+      </fieldset>
     </div>
     <div class="js-transportation-selection">
-      <h5>Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</h5>
-      <small id="transportationHelpBlock" class="form-text text-muted">
-          We provide all veterinary care at no cost to you.
-      </small>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes">
-          <label class="form-check-label" for="transportationRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios2" value="No">
-          <label class="form-check-label" for="transportationRadios2">
-          No
-          </label>
-          <div class="alert alert-warning d-none js-transportation-alert row" role="alert">
-            <i class="fas fa-ban fa-2x fa-fw col-md-1"></i>
-            <div class="col-md-11 alert-body">
-              <p>You may continue the application, but you must have a reliable transportation plan in place before fostering.</p> 
-              <p>Foster animals must receive veterinary care immediately, especially in the event of an emergency.</p>
-              <p>If you cannot get a reliable plan in place, but you would like to help in other ways, please visit <a href="http://www.austintexas.gov/department/volunteer">our volunteer page</a>.</p>
+      <fieldset>
+        <legend>Do you have reliable transportation to bring your foster animal to the Austin Animal Center for veterinary care or in the event of an emergency?</legend>
+        <small id="transportationHelpBlock" class="form-text text-muted">
+            We provide all veterinary care at no cost to you.
+        </small>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios1" value="Yes">
+            <label class="form-check-label" for="transportationRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="transportationRadios" id="transportationRadios2" value="No">
+            <label class="form-check-label" for="transportationRadios2">
+            No
+            </label>
+            <div class="alert alert-warning d-none js-transportation-alert row" role="alert">
+                <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+                <div class="col-md-11 alert-body">
+                  <p>You may continue the application, but you must have a reliable transportation plan in place before fostering.</p> 
+                  <p>Foster animals must receive veterinary care immediately, especially in the event of an emergency.</p>
+                  <p>If you cannot get a reliable plan in place, but you would like to help in other ways, please visit <a href="http://www.austintexas.gov/department/volunteer">our volunteer page</a>.</p>
             </div>
-          </div>
-      </div>
+        </div>
+      </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
     <div class="js-medications-selection">
-      <h5>If necessary, can you come to the Austin Animal Center once a month to pick up heartworm and parasite preventative medications?</h5>
-      <small id="medicationsHelpBlock" class="form-text text-muted">
-          We provide all medications at no cost to you. 
-      </small>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios1" value="Yes">
-          <label class="form-check-label" for="medicationRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios2" value="No">
-          <label class="form-check-label" for="medicationRadios2">
-          No
-          </label>
-      </div>
-      <div class="alert alert-warning d-none js-medications-alert row" role="alert">
-          <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
-          <div class="col-md-11 alert-body">
-            <p>You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</p>
-            <p>It is vital that foster animals receive their medication for their health and the health of animals around them.</p>
-          </div>  
-      </div>
+      <fieldset>
+        <legend>If necessary, can you come to the Austin Animal Center once a month to pick up heartworm and parasite preventative medications?</legend>
+        <small id="medicationsHelpBlock" class="form-text text-muted">
+            We provide all medications at no cost to you. 
+        </small>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios1" value="Yes">
+            <label class="form-check-label" for="medicationRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="medicationRadios" id="medicationRadios2" value="No">
+            <label class="form-check-label" for="medicationRadios2">
+            No
+            </label>
+        </div>
+        <div class="alert alert-warning d-none js-medications-alert row" role="alert">
+            <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+            <div class="col-md-11 alert-body">
+              <p>You may continue with the application, but if you cannot retrieve medications you should consider only short term foster periods of two weeks or less.</p>
+              <p>It is vital that foster animals receive their medication for their health and the health of animals around them.</p>
+            </div>  
+        </div>
+      </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
     <div class="js-humane-selection">
-      <h5>Are you currently fostering for another humane organization?</h5>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios1" value="Yes">
-          <label class="form-check-label" for="humaneRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios2" value="No">
-          <label class="form-check-label" for="humaneRadios2">
-          No
-          </label>
-      </div>
-      <div class="alert alert-warning d-none js-humane-alert row" role="alert">
-          <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
-          <div class="col-md-11 alert-body">
-            <p>Fostering with other organizations does not disqualify you from fostering, but we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time.</p>
-            <p>This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</p>
-          </div>    
-      </div>
+      <fieldset>
+        <legend>Are you currently fostering for another humane organization?</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios1" value="Yes">
+            <label class="form-check-label" for="humaneRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="humaneRadios" id="humaneRadios2" value="No">
+            <label class="form-check-label" for="humaneRadios2">
+            No
+            </label>
+        </div>
+        <div class="alert alert-warning d-none js-humane-alert row" role="alert">
+            <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+            <div class="col-md-11 alert-body">
+              <p>Fostering with other organizations does not disqualify you from fostering, but we do require that when you have one of the Austin Animal Center’s animals in your home, that you do not have foster animals from other organizations at the same time.</p>
+              <p>This is to protect the health, safety, and overall well-being of the animals. If you feel that you have a special circumstance that you would like for us to consider, please let us know.</p>
+            </div>    
+        </div>
+      </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
     <div>
-      <h5>Do you have experience with any of the following:</h5>
-      <small id="experienceHelpBlock" class="form-text text-muted">
-        You will not be disqualified for not having a certain experience.
-      </small>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="experienceCheck1">
-        <label class="form-check-label" for="experienceCheck1">
-          Bottle-feeding infant kittens or puppies
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="experienceCheck2">
-        <label class="form-check-label" for="experienceCheck2">
-          Administering medications (for example, oral, topical, injections, or eye drops)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="experienceCheck3">
-        <label class="form-check-label" for="experienceCheck3">
-          Behavioral issues, basic obedience training, or socialization
-        </label>
-      </div>
+      <fieldset>
+        <legend>Do you have experience with any of the following:</legend>
+        <small id="experienceHelpBlock" class="form-text text-muted">
+          You will not be disqualified for not having a certain experience.
+        </small>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="experienceCheck1">
+          <label class="form-check-label" for="experienceCheck1">
+            Bottle-feeding infant kittens or puppies
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="experienceCheck2">
+          <label class="form-check-label" for="experienceCheck2">
+            Administering medications (for example, oral, topical, injections, or eye drops)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="experienceCheck3">
+          <label class="form-check-label" for="experienceCheck3">
+            Behavioral issues, basic obedience training, or socialization
+          </label>
+        </div>
+      </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
     </div>
     <div class="js-exisiting-animal">
-      <h5>Is there already an Austin Animal Center animal you are interested in fostering?</h5>
-      <small id="animal_interestedHelpBlock" class="form-text text-muted">
-        For example, if you saw one on a Facebook post. This does not guarantee that the animal will be placed with you, but we will take you into consideration.
-      </small>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="animal_interestedRadios" id="animal_interestedRadios1" value="Yes">
-          <label class="form-check-label" for="animal_interestedRadios1">
-          Yes
-          </label>
-      </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="animal_interestedRadios" id="animal_interestedRadios2" value="No">
-          <label class="form-check-label" for="animal_interestedRadios2">
-          No
-          </label>
-      </div>
+      <fieldset>
+        <legend>Is there already an Austin Animal Center animal you are interested in fostering?</legend>
+        <small id="animal_interestedHelpBlock" class="form-text text-muted">
+          For example, if you saw one on a Facebook post. This does not guarantee that the animal will be placed with you, but we will take you into consideration.
+        </small>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="animal_interestedRadios" id="animal_interestedRadios1" value="Yes">
+            <label class="form-check-label" for="animal_interestedRadios1">
+            Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="animal_interestedRadios" id="animal_interestedRadios2" value="No">
+            <label class="form-check-label" for="animal_interestedRadios2">
+            No
+            </label>
+        </div>
+      </fieldset>
     </div>
   <div class="form-row d-none js-exisiting-animal-followup">
     <div class="form-group col-md-6">
       <label for="inputAnimal_interested">Which animal is it?</label>
-      <input type="text" class="form-control" id="inputAnimal_interested" placeholder=" " aria-describedby="Animal_interestedHelpBlock">
+      <input type="text" class="form-control" id="inputAnimal_interested" placeholder=" " aria-describedby="animal_interestedHelpBlock">
     </div>
   </div>
   <a class="btn btn-primary" href="Availability_info.html" role="button">Next</a>
