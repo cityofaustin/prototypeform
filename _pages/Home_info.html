@@ -23,18 +23,35 @@ layout: contact_sidebar
                 <label class="form-check-label" for="landlordRadios2">
                 No
                 </label>
-                <div class="alert alert-warning d-none js-own-home-alert row" role="alert">
-                    <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
-                    <div class="col-md-11 alert-body">
-                        <p>Make sure you get permission from the homeowner or property management to have pets in the home, and identify if there are breed or weight restrictions for dogs. </p>
-                        <p>If you need help getting permission from the homeowner or property management, let us know.</p>
-                    </div>
-                </div>
             </div>
         </fieldset>
     </div>
     <div>
         {% include add_explanation.html %}
+    </div>
+  <div class="js-permission-home-selection">
+        <fieldset>
+            <legend>Do you have permission from your landlord or property manager to have an animal in your home?</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="permissionRadios" id="permissionRadios1" value="Yes">
+                <label class="form-check-label" for="permissionRadios1">
+                Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="landlordRadios" id="permissionRadios2" value="No">
+                <label class="form-check-label" for="permissionRadios2">
+                No
+                </label>
+                <div class="alert alert-warning d-none js-permission-home-alert row" role="alert">
+                    <i class="fas fa-exclamation-triangle fa-2x fa-fw col-md-1"></i>
+                    <div class="col-md-11 alert-body">
+                        <p>Make sure you get permission from the homeowner or property manager to have pets in your home, and identify if there are breed or weight restrictions for dogs. </p>
+                        <p>If you need help getting permission from the homeowner or property manager, let us know.</p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
     </div>
     <!-- 2 below 'add explanation' entries to review visual difference only. Once visual styling determined, replace 'add explanation' function -->
     <!-- <div class="js-add-explanation">
@@ -90,7 +107,7 @@ layout: contact_sidebar
     </div>
     <div class="js-children">
         <fieldset>
-            <legend>Do any children under 18 live in your home?</legend>
+            <legend>Do any children under 18 live in your home or visit often?</legend>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="childrenRadios" id="childrenRadios1" value="Yes">
                 <label class="form-check-label" for="childrenRadios1">
@@ -107,7 +124,7 @@ layout: contact_sidebar
     </div>
     <div class="form-row d-none js-children-followup">
         <div class="form-group col-md-6">
-          <label for="inputChildren">Please list the ages of all children under 18 living in your home.</label>
+          <label for="inputChildren">Please list the ages of all children under 18 living in or often visiting your home.</label>
           <input type="text" class="form-control" id="inputChildren" placeholder=" ">
         </div>
     </div>
