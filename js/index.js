@@ -73,9 +73,9 @@ $(document).ready(() => {
   // INFO ABOUT YOUR HOME PAGE
   var aboutYourHomePage = (() => {
     var bindEventHandlers = () => {
-      $('.js-own-home-selection input').on('change', (e) => {
+      $('.js-permission-home-selection input').on('change', (e) => {
         var hideAlert = e.target.value === "Yes";
-        $('.js-own-home-alert').toggleClass('d-none', hideAlert);
+        $('.js-permission-home-alert').toggleClass('d-none', hideAlert);
       });
 
       $('.js-indoors-selection input').on('change', (e) => {
